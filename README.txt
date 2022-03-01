@@ -1,0 +1,16 @@
+NAME
+        redexit - Run a command and report using red text if exit code is nonzero
+SYNOPSIS
+        redexit COMMAND [ARGS...]
+DESCRIPTION
+        Run COMMAND [ARGS...] and report in red text if the exit code is nonzero.
+        The exit code is passed through, i.e. redexit returns the same code as
+        COMMAND [ARGS...] does.
+EXAMPLES
+        $ redexit false
+        redexit: command "false" failed with exit code 1
+        $ redexit foo
+        /home/jbss/bin/redexit: line 23: foo: command not found
+        redexit: command "foo" failed with exit code 127
+        In the above examples, the lines starting with "redexit:" are formatted as red
+        text.
