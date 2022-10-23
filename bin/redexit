@@ -32,7 +32,7 @@ NC='\033[0m' # No Color
 eval "${@@Q}"
 ret=$?
 if (( ret != 0 )); then
-    echo -e "${RED}redexit: command \"$@\" failed with exit code $ret${NC}"
+    echo -e "${RED}redexit $(date) - command \"$@\" failed with exit code $ret${NC}"
     exit $ret
 fi
 
